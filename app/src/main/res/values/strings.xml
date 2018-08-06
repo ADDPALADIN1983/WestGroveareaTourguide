@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">West Grove area Tour guide</string>
+    <string name="category_dining">Dining</string>
+    <string name="category_attractions">recreation</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_parks">parks</string>
 </resources>

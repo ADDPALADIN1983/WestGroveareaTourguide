@@ -20,17 +20,17 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0: {
                 //Dining
-                fragment = new com.example.alangregos.westgroveareatourguide.DiningFragment();
+                fragment = new com.example.alangregos.westgroveareatourguide.ParksFragment();
                 break;
             }
             case 1: {
                 //Shopping
-                fragment = new com.example.alangregos.westgroveareatourguide.ShoppingFragment();
+                fragment = new com.example.alangregos.westgroveareatourguide.DiningFragment();
                 break;
             }
             case 2: {
                 //Parks
-               fragment = new com.example.alangregos.westgroveareatourguide.ParksFragment();
+                fragment = new com.example.alangregos.westgroveareatourguide.ShoppingFragment();
                 break;
             }
             case 3: {
@@ -48,17 +48,17 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     }
 
 
-    /*
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return mContext.getString(R.string.category_numbers);
+            return mContext.getString(R.string.category_parks);
         } else if (position == 1) {
-            return mContext.getString(R.string.category_family);
+            return mContext.getString(R.string.category_dining);
         } else if (position == 2) {
-            return mContext.getString(R.string.category_colors);
+            return mContext.getString(R.string.category_shopping);
         } else {
-            return mContext.getString(R.string.category_phrases);
+            return mContext.getString(R.string.category_attractions);
         }
-        */
+
+    }
 }
