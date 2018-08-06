@@ -1,6 +1,11 @@
 package com.example.alangregos.westgroveareatourguide;
 
-public class ListEntry {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class ListEntry implements Serializable{
     /*  class for what each entry will contain.
         getters for information contained in each entry
         constructors build the entry and place it into the arrayList.

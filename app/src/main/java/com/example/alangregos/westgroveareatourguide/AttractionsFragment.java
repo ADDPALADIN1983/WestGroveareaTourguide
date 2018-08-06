@@ -1,5 +1,6 @@
 package com.example.alangregos.westgroveareatourguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,8 +10,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class AttractionsFragment  extends Fragment {
+public class AttractionsFragment extends Fragment {
 
 
     @Override
@@ -20,6 +22,7 @@ public class AttractionsFragment  extends Fragment {
         final ArrayList<ListEntry> location = new ArrayList<ListEntry>();
 
         // TODO: 8/5/2018 populate the list with entries
+
 
         //location.add("data to be added from constructor")
 
@@ -43,8 +46,12 @@ public class AttractionsFragment  extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 ListEntry entry = location.get(position);
-
-
+                Bundle bundle = new Bundle();
+                bundle.putSerializable ("current", entry);
+                MoreInfoFragment fragInfo = new MoreInfoFragment();
+                fragInfo.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.text_view_container, fragInfo);
+                getFragmentManager().beginTransaction().commit();
             }
 
         });

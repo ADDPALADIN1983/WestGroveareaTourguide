@@ -1,9 +1,8 @@
 package com.example.alangregos.westgroveareatourguide;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,13 +39,18 @@ public class DiningFragment extends Fragment {
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
+        // location_list.xml layout file.
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 ListEntry entry = location.get(position);
 
-
+                Bundle bundle = new Bundle();
+                bundle.putSerializable ("current", entry);
+                MoreInfoFragment fragInfo = new MoreInfoFragment();
+                fragInfo.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.text_view_container, fragInfo);
+                getFragmentManager().beginTransaction().commit();
             }
 
         });

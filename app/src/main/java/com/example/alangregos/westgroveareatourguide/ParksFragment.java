@@ -43,9 +43,15 @@ public class ParksFragment  extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 ListEntry entry = location.get(position);
-
+                Bundle bundle = new Bundle();
+                bundle.putSerializable ("current", entry);
+                MoreInfoFragment fragInfo = new MoreInfoFragment();
+                fragInfo.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.text_view_container, fragInfo);
+                getFragmentManager().beginTransaction().commit();
 
             }
+
 
         });
 

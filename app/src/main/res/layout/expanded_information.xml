@@ -2,37 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textAlignment="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:textAlignment="center">
 
     <ImageView
         android:id="@+id/entrance_picture"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content" />
+        android:background="@drawable/placeholder" />
 
     <TextView
         android:id="@+id/location_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/location_address"
+        android:id="@+id/location_street_address"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/location_website"
+        android:id="@+id/location_city_state_zip"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/location_phone_number"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/location_website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
 </LinearLayout>
