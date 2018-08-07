@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ShoppingFragment  extends Fragment {
+public class ShoppingFragment extends Fragment {
 
 
     @Override
@@ -19,9 +19,24 @@ public class ShoppingFragment  extends Fragment {
 
         final ArrayList<ListEntry> location = new ArrayList<ListEntry>();
 
-        // TODO: 8/5/2018 populate the list with entries
-
         //location.add("data to be added from constructor")
+        location.add(new ListEntry("Oxford Commons", "300 Commons Dr",
+                "Oxford, PA 19363",  39.795627, -75.976877, R.drawable.placeholder));
+
+        location.add(new ListEntry("Shoppes At Longwood Village", "859 E Baltimore Pike",
+                "Kennett Square, PA 19348", 39.863335, -75.683164, R.drawable.placeholder));
+
+        location.add(new ListEntry("New Garden Town Square", "350 Scarlet Rd",
+                "Kennett Square, PA 19348",  39.839948, -75.731611, R.drawable.placeholder));
+
+        location.add(new ListEntry("Hockessin Crossing Shopping Center", "7465 Lancaster Pike",
+                "Hockessin, DE 19707",  39.790238, -75.698800, R.drawable.placeholder));
+
+        location.add(new ListEntry("Concord Mall", "4737 Concord Pike #720",
+                "Wilmington, DE 19803", 39.822859, -75.543908, R.drawable.placeholder));
+
+
+
 
         // Keep looping until we've reached the end of the list (which means keep looping
         // as long as the current index position is less than the length of the list)
@@ -44,7 +59,7 @@ public class ShoppingFragment  extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 ListEntry entry = location.get(position);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable ("current", entry);
+                bundle.putSerializable("current", entry);
                 MoreInfoFragment fragInfo = new MoreInfoFragment();
                 fragInfo.setArguments(bundle);
                 getFragmentManager().beginTransaction().replace(R.id.text_view_container, fragInfo);

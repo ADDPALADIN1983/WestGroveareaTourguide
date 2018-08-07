@@ -88,9 +88,12 @@ public class ListEntryAdapter extends ArrayAdapter<ListEntry> {
 
         //set the backround color of all the text views in the list
         View container = (View) listItemView.findViewById(R.id.text_view_container);
+        View image = (View) listItemView.findViewById(R.id.location_image);
+
         // Find the color that the resource ID maps to
         int color = ContextCompat.getColor(getContext(), mbackroundColor);
         container.setBackgroundColor(color);
+        image.setBackgroundColor(color);
 
         //decide if the image view will be rendered removed from the layout
         if (currentListEntry.hasImage()) {

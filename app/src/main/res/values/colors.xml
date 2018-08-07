@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#8a9fd4</color>
 
     <color name="colorParks">#003300</color>
     <color name="colorDining">#800000</color>

@@ -19,9 +19,22 @@ public class ParksFragment  extends Fragment {
 
         final ArrayList<ListEntry> location = new ArrayList<ListEntry>();
 
-        // TODO: 8/5/2018 populate the list with entries
-
         //location.add("data to be added from constructor")
+        location.add(new ListEntry("West Grove Memorial Park", "140 Rosehill Ave",
+                "West Grove, PA 19390", 39.821885, -75.824900, R.drawable.placeholder));
+
+        location.add(new ListEntry("Goddard Park", "282 PA-841",
+                "West Grove, PA 19390", 39.812516, -75.825810, R.drawable.placeholder));
+
+        location.add(new ListEntry("New Garden Township Park", "8938 Gap Newport Pike",
+                "Landenberg, PA 19350", 39.808446, -75.754971, R.drawable.placeholder));
+
+        location.add(new ListEntry("White Clay Creek State Park", "880 New London Rd",
+                "Newark, DE 19711",  39.733139, -75.757122, R.drawable.placeholder));
+
+        location.add(new ListEntry("Penn Township Park", "260 Lewis Rd",
+                "West Grove, PA 19390",  39.822227,  -75.882318, R.drawable.placeholder));
+
 
         // Keep looping until we've reached the end of the list (which means keep looping
         // as long as the current index position is less than the length of the list)
