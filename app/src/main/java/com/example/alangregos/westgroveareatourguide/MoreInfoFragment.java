@@ -1,7 +1,9 @@
 package com.example.alangregos.westgroveareatourguide;
 
 import android.content.Context;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,14 +11,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 public class MoreInfoFragment extends Fragment {
+
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Serializable serializable = savedInstanceState.getSerializable(ListEntry.TAG);
+        ListEntry current = (ListEntry) serializable;
         View rootView = inflater.inflate(R.layout.expanded_information, container, false);
 
-        ListEntry current = (ListEntry) this.getArguments().getSerializable("current");
+
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView nameTextView = (TextView) rootView.findViewById(R.id.location_name);

@@ -1,14 +1,16 @@
 package com.example.alangregos.westgroveareatourguide;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import java.util.List;
+
+
 public class MoreInfoActivity extends AppCompatActivity {
 
-    ListEntry entry;
-    MoreInfoActivity(ListEntry current){
-        entry=current;
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,4 +20,5 @@ public class MoreInfoActivity extends AppCompatActivity {
                 .replace(R.id.container, new MoreInfoFragment())
                 .commit();
     }
+
 }

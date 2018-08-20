@@ -11,18 +11,21 @@ public class ListEntry implements Serializable{
         constructors build the entry and place it into the arrayList.
      */
 
+    public static final String TAG = "listItem";
+
     private String mBussinessName;
     private String mBussinessStreetAddress;
     private String mCityStateZip;
     private String mBusinessWebsite = null;
     private String mPhoneNumber = null;
+    private String mDescription;
     private double mDecimalLatitude;
     private double mDecimalLongitude;
     private final int NO_IMAGE_PROVIDED = -1;
     private int mImage = NO_IMAGE_PROVIDED;
 
     //Full constructor for locations that have an address, website and phone number.
-    public ListEntry(String name, String street, String cityStateZip, String website, String phone, double lat, double lng, int image) {
+    public ListEntry(String name, String street, String cityStateZip, String website, String phone, double lat, double lng, int image, String description) {
 
         mBussinessName = name;
         mBussinessStreetAddress = street;
@@ -32,11 +35,12 @@ public class ListEntry implements Serializable{
         mDecimalLatitude = lat;
         mDecimalLongitude = lng;
         mImage = image;
+        mDescription = description;
 
     }
 
     //Construtor for locations that don't have website.
-    public ListEntry(String name, String street, String cityStateZip, String phone, double lat, double lng, int image) {
+    public ListEntry(String name, String street, String cityStateZip, String phone, double lat, double lng, int image, String description) {
 
         mBussinessName = name;
         mBussinessStreetAddress = street;
@@ -45,11 +49,12 @@ public class ListEntry implements Serializable{
         mDecimalLatitude = lat;
         mDecimalLongitude = lng;
         mImage = image;
+        mDescription = description;
 
     }
 
     //Constructor for locations that don't have a website or a phone number.
-    public ListEntry(String name, String street, String cityStateZip, double lat, double lng, int image) {
+    public ListEntry(String name, String street, String cityStateZip, double lat, double lng, int image, String description) {
 
         mBussinessName = name;
         mBussinessStreetAddress = street;
@@ -57,6 +62,7 @@ public class ListEntry implements Serializable{
         mDecimalLatitude = lat;
         mDecimalLongitude = lng;
         mImage = image;
+        mDescription = description;
 
     }
 
@@ -90,6 +96,10 @@ public class ListEntry implements Serializable{
 
     public int getmImage() {
         return mImage;
+    }
+
+    public String getmDescription(){
+        return mDescription;
     }
 
     public boolean hasImage() {

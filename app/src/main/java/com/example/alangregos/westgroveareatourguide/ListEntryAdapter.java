@@ -1,6 +1,8 @@
 package com.example.alangregos.westgroveareatourguide;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +11,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static com.example.alangregos.westgroveareatourguide.ListEntry.TAG;
 
 public class ListEntryAdapter extends ArrayAdapter<ListEntry> {
 
@@ -42,13 +47,22 @@ public class ListEntryAdapter extends ArrayAdapter<ListEntry> {
      * @return The View for the position in the AdapterView.
      */
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
+
+        listItemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ListEntry entry = getItem(position);
+                Toast.makeText(getContext(), entry.getmDescription(), Toast.LENGTH_LONG).show();
+            }
+        });
+
 
         // Get the {@link ListEntry} object located at this position in the list
         ListEntry currentListEntry = getItem(position);
@@ -105,4 +119,6 @@ public class ListEntryAdapter extends ArrayAdapter<ListEntry> {
         // so that it can be shown in the ListView
         return listItemView;
     }
+
+
 }
