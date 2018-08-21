@@ -1,7 +1,32 @@
 <resources>
     <string name="app_name">West Grove area Tour guide</string>
+
+    <!-- tab labels -->
     <string name="category_dining">Dining</string>
     <string name="category_attractions">recreation</string>
     <string name="category_shopping">Shopping</string>
     <string name="category_parks">parks</string>
+
+    <!-- all the descriptions for the entries -->
+    <string name="sake_hana_description">Asian food that you can get as mild or spicy as you want.</string>
+    <string name="perkins_description">Country diner style food at a great price and very family friendly.</string>
+    <string name="sapori_description">Pizza place with great service and very friendly owner.</string>
+    <string name="china_kitchen_descripton">Chinese food for delivery or carry out.</string>
+    <string name="west_grove_diner_description">Standard american style diner.</string>
+    <string name="marrone_description">Sandwich shop best know for it\'s super sized sandwiches.</string>
+    <string name="twelves_description">American style food with a nice patio when the weather is nice.</string>
+    <string name="brothers_descrpition">Pretty standard italian restaurant with pretty good pizza that delivers.</string>
+    <string name="two_stones_description">Pretty standard bar with a limited menu but the food and staff good.</string>
+    <string name="sakura_description">The only hibachi grill in the area, great for an entertaining dinner out.</string>
+    <string name="wg_memorial_description">Open park with swings, slides and a soccer field.</string>
+    <string name="goddard_description">Open park with swing set and climbing structure. It also has a dog park and multiple trails.</string>
+    <string name="new_garden_park_description">Park with pavilions trails and playground equipment as well as baseball and soccer fields.</string>
+    <string name="clay_creek_description">Nature preserve with lots of hiking trails and scenic views.</string>
+    <string name="penn_township_description">Park with pavilions playground sets and paths to walk or run on.</string>
+    <string name="oxford_common_description">Shopping center with Wal-Mart, Starbucks, McDonalds and Snap Fitness.</string>
+    <string name="longwood_shoppes_description">Shopping center with TJ Maxx, Famous Footwear, Staples, Starbucks, Wendy’s and, GNC.</string>
+    <string name="new_garden_square_description">Shopping center with Giant, Wells Fargo, Pat\'s Pizza, China One and, Wine and Spirits Shop.</string>
+    <string name="hockessin_crossing_description">Small shopping center with Six Paupers Restaurant and Pub, Wells Fargo, Long and Foster Realtors.</string>
+    <string name="concord_mall_description">Larger shopping mall with a couple dozen man brand stores, mostly clothes and shoes, as well as a few electronics stores.</string>
+
 </resources>

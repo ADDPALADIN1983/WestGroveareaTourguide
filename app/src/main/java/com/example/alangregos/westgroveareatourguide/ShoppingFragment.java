@@ -22,23 +22,23 @@ public class ShoppingFragment extends Fragment {
         //location.add("data to be added from constructor")
         location.add(new ListEntry("Oxford Commons", "300 Commons Dr",
                 "Oxford, PA 19363", 39.795627, -75.976877, R.drawable.oxford_commons,
-                "Shopping center with Wal-Mart, Starbucks, McDonalds and Snap Fitness. "));
+                getString(R.string.oxford_common_description)));
 
         location.add(new ListEntry("Shoppes At Longwood Village", "859 E Baltimore Pike",
                 "Kennett Square, PA 19348", 39.863335, -75.683164, R.drawable.shoppes_at_longwood,
-                "Shopping center with TJ Maxx, Famous Footwear, Staples, Starbucks, Wendy’s and, GNC. "));
+                getString(R.string.longwood_shoppes_description)));
 
         location.add(new ListEntry("New Garden Town Square", "350 Scarlet Rd",
                 "Kennett Square, PA 19348", 39.839948, -75.731611, R.drawable.new_garden_town_square,
-                "Shopping center with Giant, Wells Fargo, Pat's Pizza, China One and, Wine and Spirits Shop. "));
+                getString(R.string.new_garden_square_description)));
 
         location.add(new ListEntry("Hockessin Crossing Shopping Center", "7465 Lancaster Pike",
                 "Hockessin, DE 19707", 39.790238, -75.698800, R.drawable.hockessin_crossing_shopping_center,
-                "Small shopping center with Six Paupers Resaurant and Pub, Wells Fargo, Long and Foster Realtors. "));
+                getString(R.string.hockessin_crossing_description)));
 
         location.add(new ListEntry("Concord Mall", "4737 Concord Pike #720",
                 "Wilmington, DE 19803", 39.822859, -75.543908, R.drawable.concord_mall,
-                "Larger shopping mall with a couple dozen man brand stores, mostly clothes and shoes, as well as a few electronics stores. "));
+                getString(R.string.concord_mall_description)));
 
 
         // Keep looping until we've reached the end of the list (which means keep looping

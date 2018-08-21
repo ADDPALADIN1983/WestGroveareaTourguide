@@ -22,23 +22,23 @@ public class ParksFragment extends Fragment {
         //location.add("data to be added from constructor")
         location.add(new ListEntry("West Grove Memorial Park", "140 Rosehill Ave",
                 "West Grove, PA 19390", 39.821885, -75.824900, R.drawable.west_grove_memorial_park,
-                "Open park with swings, slides and a soccer field."));
+                getString(R.string.wg_memorial_description)));
 
         location.add(new ListEntry("Goddard Park", "282 PA-841",
                 "West Grove, PA 19390", 39.812516, -75.825810, R.drawable.goddard_park,
-                "Open park with swing set and climbing structure. It also has a dog park and multiple trails."));
+                getString(R.string.goddard_description)));
 
         location.add(new ListEntry("New Garden Township Park", "8938 Gap Newport Pike",
                 "Landenberg, PA 19350", 39.808446, -75.754971, R.drawable.new_garden_township_park,
-                "Park with pavilions trails and playground equipment as ewell as basseball and soccer fields. "));
+                getString(R.string.new_garden_park_description)));
 
         location.add(new ListEntry("White Clay Creek State Park", "880 New London Rd",
                 "Newark, DE 19711", 39.733139, -75.757122, R.drawable.white_clay_creek_state_park,
-                "Nature preserve with lots of hiking trails and scenic views. "));
+                getString(R.string.clay_creek_description)));
 
         location.add(new ListEntry("Penn Township Park", "260 Lewis Rd",
                 "West Grove, PA 19390", 39.822227, -75.882318, R.drawable.penn_township_park,
-                "Park with pavilions playground sets and paths to walk or run on. "));
+                getString(R.string.penn_township_description)));
 
 
         // Keep looping until we've reached the end of the list (which means keep looping
