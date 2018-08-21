@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ParksFragment  extends Fragment {
+public class ParksFragment extends Fragment {
 
 
     @Override
@@ -33,11 +33,11 @@ public class ParksFragment  extends Fragment {
                 "Park with pavilions trails and playground equipment as ewell as basseball and soccer fields. "));
 
         location.add(new ListEntry("White Clay Creek State Park", "880 New London Rd",
-                "Newark, DE 19711",  39.733139, -75.757122, R.drawable.white_clay_creek_state_park,
+                "Newark, DE 19711", 39.733139, -75.757122, R.drawable.white_clay_creek_state_park,
                 "Nature preserve with lots of hiking trails and scenic views. "));
 
         location.add(new ListEntry("Penn Township Park", "260 Lewis Rd",
-                "West Grove, PA 19390",  39.822227,  -75.882318, R.drawable.penn_township_park,
+                "West Grove, PA 19390", 39.822227, -75.882318, R.drawable.penn_township_park,
                 "Park with pavilions playground sets and paths to walk or run on. "));
 
 
@@ -53,25 +53,6 @@ public class ParksFragment  extends Fragment {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
-
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                ListEntry entry = location.get(position);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable (ListEntry.TAG, entry);
-                MoreInfoFragment fragInfo = new MoreInfoFragment();
-                fragInfo.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.text_view_container, fragInfo);
-                getFragmentManager().beginTransaction().commit();
-
-            }
-
-
-        });
 
         return rootView;
 

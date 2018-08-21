@@ -32,8 +32,8 @@ public class DiningFragment extends Fragment {
                 "Country diner style food at a great price and very family friendly. "));
 
         location.add(new ListEntry("Pizzeria Dei Sapori", "300 E Baltimore Pike",
-                "West Grove, PA 19390",  "(610) 869-2221",
-                39.826092,  -75.821879, R.drawable.pizzeria_dei_sapori,
+                "West Grove, PA 19390", "(610) 869-2221",
+                39.826092, -75.821879, R.drawable.pizzeria_dei_sapori,
                 "Pizza place with great service and very friendly owner. "));
 
         location.add(new ListEntry("China Kitchen", "119 Rosehill Ave",
@@ -48,7 +48,7 @@ public class DiningFragment extends Fragment {
 
         location.add(new ListEntry("Marrone Delicatessen", "101 Prospect Ave",
                 "West Grove, PA 19390", "marronesdeli.com", "(610) 869-8616",
-                39.821515,  -75.826830, R.drawable.marrone_delicatessen,
+                39.821515, -75.826830, R.drawable.marrone_delicatessen,
                 "Sandwich shop best know for ti's super sized sandwiches. "));
 
         location.add(new ListEntry("Twelves Grill & Cafe", "10 Exchange Pl",
@@ -72,7 +72,6 @@ public class DiningFragment extends Fragment {
                 "The only hibachi grill in the area, great for an entertaining dinner out. "));
 
 
-
         // Keep looping until we've reached the end of the list (which means keep looping
         // as long as the current index position is less than the length of the list)
 
@@ -85,24 +84,6 @@ public class DiningFragment extends Fragment {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
-
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // location_list.xml layout file.
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                ListEntry entry = location.get(position);
-
-                Bundle bundle = new Bundle();
-                bundle.putSerializable ("current", entry);
-                MoreInfoFragment fragInfo = new MoreInfoFragment();
-                fragInfo.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.text_view_container, fragInfo);
-                getFragmentManager().beginTransaction().commit();
-            }
-
-        });
 
         return rootView;
 

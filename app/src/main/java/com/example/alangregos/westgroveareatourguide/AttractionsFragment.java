@@ -96,21 +96,6 @@ public class AttractionsFragment extends Fragment {
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                ListEntry entry = location.get(position);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable (ListEntry.TAG, entry);
-                MoreInfoFragment fragInfo = new MoreInfoFragment();
-                fragInfo.setArguments(bundle);
-                getFragmentManager().beginTransaction().replace(R.id.text_view_container, fragInfo);
-                getFragmentManager().beginTransaction().commit();
-
-            }
-
-
-        });
 
         return rootView;
 
