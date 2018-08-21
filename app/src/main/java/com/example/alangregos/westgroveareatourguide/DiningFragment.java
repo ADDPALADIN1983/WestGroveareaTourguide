@@ -24,7 +24,7 @@ public class DiningFragment extends Fragment {
         location.add(new ListEntry("Sake Hana", "801 Gap Newport Pike",
                 "Avondale, PA 19311", " sakehanapa.com", "(610) 268-2889",
                 39.835037, -75.797537, R.drawable.sake_hana,
-                "Asian food that you can get as spicy or mild as you want."));
+                "Asian food that you can get as mild or spicy as you want."));
 
         location.add(new ListEntry("Perkins Restaurant and Bakery", "954 Gap Newport Pike",
                 "Avondale, PA 19311", "stores.perkinsrestaurants.com", "(610) 268-3513",

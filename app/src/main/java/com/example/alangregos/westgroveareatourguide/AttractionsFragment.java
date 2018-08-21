@@ -77,7 +77,7 @@ public class AttractionsFragment extends Fragment {
                 39.748008, -76.0187100, R.drawable.herrs_snack_facotry_tour,
                 "Tour of the Herr's snack factory with some of the company and family history and snacks at the end. "));
 
-        location.add(new ListEntry("Brandywine Battlefield Park Associates",
+        location.add(new ListEntry("Brandywine Battlefield Park",
                 "1491 Baltimore Pike", "Chadds Ford, PA 19317",
                 "brandywinebattlefield.org", "(610) 459-3342", 39.874516,
                 -75.576284, R.drawable.brandywine_battlefield_park,
